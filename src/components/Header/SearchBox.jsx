@@ -21,7 +21,7 @@ const SearchBox = () => {
         id="search"
       />
       <Link
-        to="/current"
+        to="/info"
         onClick={handleSearch}
         className="text-xl border-2 border-white p-2 rounded-full hover:bg-white hover:text-black"
       >

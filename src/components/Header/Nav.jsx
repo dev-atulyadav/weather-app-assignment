@@ -10,7 +10,7 @@ const Nav = () => {
       </button>
       <ul className="sm:flex gap-4 hidden font-semibold text-lg">
         <Link
-          to="/current"
+          to="/info"
           className="p-2 hover:bg-blue-200 hover:text-black rounded-lg "
         >
           Current

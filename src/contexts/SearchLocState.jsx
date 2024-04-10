@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const SearchLocContext = createContext();
 const SearchLocState = ({ children }) => {
-  const [loc, setLoc] = useState("");
+  const [loc, setLoc] = useState("India");
   const handleLoc = (e) => setLoc(e.target.value);
 
   return (

@@ -14,12 +14,8 @@ export const router = createBrowserRouter([
         element: <Section />,
       },
       {
-        path: "/current",
+        path: "/info",
         element: <Info />,
-      },
-      {
-        path: "/forecast",
-        element: <Forecast />,
       },
     ],
   },

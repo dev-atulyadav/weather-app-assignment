@@ -9,7 +9,7 @@ const CurrentDataState = ({ children }) => {
   const [search, setSearch] = useState(false);
   const [data, setData] = useState({});
   useEffect(() => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=9ceaac0464c91b9c57546c3466a44908`;
+    let url = `http://api.weatherapi.com/v1/forecast.json?key=f8366378fb174ab183681435241004&q=${loc}&days=8`;
     let resp = axios.get(url);
     resp.then((res) => {
       setData(res.data);
@@ -24,7 +24,7 @@ const CurrentDataState = ({ children }) => {
     setSearch(!search);
   };
   return (
-    <CurrentDataContext.Provider value={{ data, load, handleSearch }}>
+    <CurrentDataContext.Provider value={{ data, load, search, handleSearch }}>
       {children}
     </CurrentDataContext.Provider>
   );
