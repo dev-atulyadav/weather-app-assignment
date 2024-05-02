@@ -9,8 +9,7 @@ const CurrentDataState = ({ children }) => {
   const [error, setError] = useState(false);
   const [data, setData] = useState({});
   useEffect(() => {
-    const key = import.meta.env.VITE_WEATHER_API_KEY;
-    let url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${loc}&days=8`;
+    let url = `http://api.weatherapi.com/v1/forecast.json?key=${"b1da73d2172d45a397785349240205"}&q=${loc}&days=8`;
     if (search != 0) {
       let resp = axios.get(url);
       resp

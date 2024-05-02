@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
-import WeatherReport from "./WeatherReport";
-import { CurrentDataContext } from "../../../contexts/CurrentDataState";
+import { CurrentDataContext } from "../../contexts/CurrentDataState";
 
 const Forecast = () => {
   const { data } = useContext(CurrentDataContext);
   return (
     <div className="w-full bg-black text-white p-4 flex justify-center items-center flex-col gap-4">
-      <article className="flex justify-center items-center gap-4 relative z-10 rounded-xl border-2 overflow-hidden h-full w-full">
+      <article className="flex justify-center items-center gap-4 relative z-10 rounded-xl border-2 overflow-hidden h-full w-full bg-[#303030] sm:bg-transparent">
         <img
-          className="w-full h-full absolute z-10"
+          className="w-full h-full absolute z-10 hidden sm:block"
           src={`https://source.unsplash.com/1600x900/?weather&${data.current.condition.text}`}
           alt=""
         />

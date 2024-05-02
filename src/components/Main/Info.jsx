@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { CurrentDataContext } from "../../../contexts/CurrentDataState";
+import { CurrentDataContext } from "../../contexts/CurrentDataState";
 import Loader from "./Loader";
 import WeatherReport from "./WeatherReport";
 import Forecast from "./Forecast";
-import Alert from "../../Section/Alert";
+import Alert from "../Section/Alert";
 import Error from "./Error";
 
 const Info = () => {
