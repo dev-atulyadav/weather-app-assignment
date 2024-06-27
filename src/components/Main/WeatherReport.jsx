@@ -1,4 +1,5 @@
 import React from "react";
+import Bg from "../../assets/bg.jpg";
 
 const WeatherReport = ({ data }) => {
   return (
@@ -7,9 +8,11 @@ const WeatherReport = ({ data }) => {
       className="h-[30rem] w-full rounded-xl flex justify-center items-center relative overflow-hidden border-2"
     >
       <img
-        src={`https://source.unsplash.com/1600x900/?${data.current.condition.text}`}
+        src={Bg}
         className="absolute h-screen w-screen"
         alt=""
+        loading="eager"
+        fetchPriority="high"
       />
       <main className="flex flex-col justify-center items-center gap-6 relative z-10 h-full w-full bg-[#0000006b] p-4">
         <div className="flex justify-center items-center gap-2 sm:gap-10 text-3xl sm:text-6xl font-bold flex-col sm:flex-row">

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CurrentDataContext } from "../../contexts/CurrentDataState";
+import Bg from "../../assets/bg.jpg";
 
 const Forecast = () => {
   const { data } = useContext(CurrentDataContext);
@@ -7,9 +8,11 @@ const Forecast = () => {
     <div className="w-full bg-black text-white p-4 flex justify-center items-center flex-col gap-4">
       <article className="flex justify-center items-center gap-4 relative z-10 rounded-xl border-2 overflow-hidden h-full w-full bg-[#303030] sm:bg-transparent">
         <img
-          className="w-full h-full absolute z-10 hidden sm:block"
-          src={`https://source.unsplash.com/1600x900/?weather&${data.current.condition.text}`}
+          className="w-full h-full absolute z-10  sm:block"
+          src={Bg}
           alt=""
+          loading="eager"
+          fetchPriority="high"
         />
         <main className="relative z-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-center items-center gap-4 h-full w-full bg-[#0000007b] p-4 overflow-scroll">
           {data.location != undefined &&

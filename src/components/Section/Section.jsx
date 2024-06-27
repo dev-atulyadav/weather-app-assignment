@@ -26,7 +26,13 @@ const Section = () => {
               Check now
             </label>
           </div>
-          <img src={Bg_1} className="h-[25rem] sm:w-[40%]" alt="" />
+          <img
+            src={Bg_1}
+            className="h-[25rem] sm:w-[40%]"
+            alt=""
+            loading="eager"
+            fetchPriority="high"
+          />
         </main>
         {alert && <Alert message={"Enter the location above!!!"} />}
       </article>
